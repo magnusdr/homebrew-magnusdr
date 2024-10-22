@@ -7,5 +7,5 @@ export SHA256=$(shasum -a 256 tet-vehicle-display_macos_v$VERSION.tar.gz | awk '
 
 echo "Creating Cask for TET Vehicle Display v$VERSION with SHA256 $SHA256"
 
-sed -i '' "s/{{VERSION}}/$VERSION/g" Casks/tet-vehicle-display.rb
-sed -i '' "s/{{SHA256}}/$SHA256/g" Casks/tet-vehicle-display.rb
+sed -i -e "s/{{VERSION}}/$VERSION/g" Casks/tet-vehicle-display.rb
+sed -i -e "s/{{SHA256}}/$SHA256/g" Casks/tet-vehicle-display.rb
